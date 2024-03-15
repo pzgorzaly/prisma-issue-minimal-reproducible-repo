@@ -1,0 +1,31 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator kysely {
+  provider = "prisma-kysely"
+  output   = "../src/kysely-db"
+  fileName = "types.ts"
+}
+
+model Test {
+  id        Int      @id @default(autoincrement())
+  data      Json
+  createdAt DateTime @default(now()) @db.Timestamptz()
+  updatedAt DateTime @default(now()) @updatedAt @db.Timestamptz()
+}
+
+model TestWithoutJSON {
+  id        Int      @id @default(autoincrement())
+  data      String
+  createdAt DateTime @default(now()) @db.Timestamptz()
+  updatedAt DateTime @default(now()) @updatedAt @db.Timestamptz()
+}

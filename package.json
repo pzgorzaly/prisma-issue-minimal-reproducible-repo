@@ -11,10 +11,10 @@
     "seed": "prisma db seed",
     "build": "tsc  -p tsconfig.json",
     "run": "node ./dist/index.js",
-    "analysis:prisma:json": "clinic doctor --on-port 'autocannon localhost:3001'  -- node ./src/index.js prisma",
-    "analysis:prisma:no-json": "clinic doctor --on-port 'autocannon localhost:3001/without-json'  -- node ./src/index.js prisma",
-    "analysis:kysely:json": "clinic doctor --on-port 'autocannon localhost:3001'  -- node ./src/index.js kysely",
-    "analysis:kysely:no-json": "clinic doctor --on-port 'autocannon localhost:3001/without-json'  -- node ./src/index.js kysely"
+    "analysis:prisma:json": "clinic doctor --on-port 'autocannon localhost:3001'  -- node ./dist/index.js prisma",
+    "analysis:prisma:no-json": "clinic doctor --on-port 'autocannon localhost:3001/without-json'  -- node ./dist/index.js prisma",
+    "analysis:kysely:json": "clinic doctor --on-port 'autocannon localhost:3001'  -- node ./dist/index.js kysely",
+    "analysis:kysely:no-json": "clinic doctor --on-port 'autocannon localhost:3001/without-json'  -- node ./dist/index.js kysely"
   },
   "keywords": [],
   "author": "",

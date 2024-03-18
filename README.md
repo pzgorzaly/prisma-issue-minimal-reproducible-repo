@@ -6,7 +6,7 @@ This repository contains a minimal, reproducible example demonstrating an issue 
 
 When executing specific queries, the application's RSS memory usage spikes, sometimes reaching up to 1GB. This behavior has been observed consistently and can be reproduced using the code provided in this repository.
 
-To demonstrate that the issue is related to Prisma, we have benchmarked the same operations using the Kysely ORM framework. Additionally, a workaround was implemented where a text field was used instead of a JSON column. A workaround has been implemented where a text field is used instead of a JSON column. While this reduces the problem, it is not a perfect solution.
+To demonstrate that the issue is related to Prisma, we have benchmarked the same operations using the Kysely ORM framework. Additionally, a workaround was implemented where a text field was used instead of a JSON column. While this reduces the problem, it is not a perfect solution.
 
 ## Reproducing the Issue
 

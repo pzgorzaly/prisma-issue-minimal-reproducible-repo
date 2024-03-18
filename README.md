@@ -17,26 +17,31 @@ To reproduce the issue locally, follow these steps:
   docker-compose up -d
 ```
 
-2. Run Prisma migrations:
+2. Install dependencies:
+```bash
+  pnpm install
+```
+
+3. Run Prisma migrations:
 ```bash
   pnpm run migrate
 ```
 
-3. Seed the database:
+4. Seed the database:
 ```bash
   pnpm run seed
 ```
 
-4. Build the project:
+5. Build the project:
 ```bash
   pnpm run build
 ```
 
-5. Start the server:
+6. Start the server with prisma:
 ```bash
   pnpm run run prisma
 ```
-or
+or with kysely
 ```bash
 pnpm run run kysely
 ```

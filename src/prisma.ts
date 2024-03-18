@@ -1,6 +1,4 @@
-import {PrismaClient} from "@prisma/client";
-import {type Prisma} from ".prisma/client";
-
+import {PrismaClient, type Prisma} from "@prisma/client";
 
 const prisma = new PrismaClient()
 
@@ -27,6 +25,6 @@ export const updateObjectWithoutJSON = async () => {
 
     return prisma.testWithoutJSON.update({
         where: {id},
-        data: {...test, data: JSON.stringify(JSON.parse(test?.data ?? ''))} 
+        data: {...test, data: JSON.stringify(JSON.parse(test?.data ?? ''))}
     });
 }
